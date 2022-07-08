@@ -27,7 +27,7 @@ class Summoner extends AutoCreator
         return $stats;
     }
 
-    public function getStatsFromChampionByNumber($champion_id,$numberOfGame) {
+    public function getStatsFromChampionByNumberOfGames($champion_id,$numberOfGame) {
         $stats = [];
 
         foreach($this->getMatchesFromIds($this->getHistoryId($numberOfGame,0)) as $match) {

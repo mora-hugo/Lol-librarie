@@ -1,6 +1,6 @@
 <?php
 require_once("Model/Autoloader.class.php");
-Autoloader::register(); 
+Autoloader::register();
 
 ini_set("xdebug.var_display_max_children", '-1');
 ini_set("xdebug.var_display_max_data", '-1');
@@ -16,7 +16,6 @@ $api = new API(API_KEY);
 
 
 $summoner = $api->getSummonerByName("Zankanotachi");
-var_dump($summoner->getStatsFromChampionByNumber(202,19));
-echo $api->nb;
+var_dump($summoner->getHistory(90));
+echo $api->getNbRequests() . " requests.<br>";
 echo 'Total execution time in seconds: ' . (microtime(true) - $time_start);
-

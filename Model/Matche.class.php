@@ -20,7 +20,7 @@ class Matche extends AutoCreator
     public function getPlayersSortedByPuuid()
     {
         $participants = [];
-        var_dump($this);
+
         foreach ($this->info->participants as $participant) {
             $participants[$participant->puuid] = new Player($participant, $this->api);
         }
